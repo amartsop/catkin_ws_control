@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find lwa4p_description)/urdf/common.xacro" />
+  <xacro:include filename="$(find lwa4p_description)/urdf/lwa4p.gazebo.xacro" />
+  <xacro:include filename="$(find lwa4p_description)/urdf/lwa4p.transmission.xacro" />
+
+  
+    <xacro:macro name="schunk_lwa4p" params="parent name">
+
+        <!-- Joint 0 -->
+        <joint name="${name}_base_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="${name}_0_link"/>
+        </joint>
+
+        <!-- Link 0 -->
+        <link name="${name}_0_link">
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link0.stl" />
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link0.stl" />
+                </geometry>
+                <material name="orange"/>
+            </visual>
+
+            <xacro:default_inertial/>
+        </link>
+
+        <!-- Joint 1 -->
+        <joint name="${name}_1_joint" type="continuous">
+            <parent link="${name}_0_link"/>
+            <child link="${name}_1_link"/>
+            <origin xyz="0 0 0.205" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+        </joint>
+
+        <!-- Link 1 -->
+        <link name="${name}_1_link">
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link1.stl" />
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link1.stl" />
+                </geometry>
+                <material name="black"/>
+            </visual>
+
+            <xacro:default_inertial/>
+        </link>
+
+        <!-- Joint 2 -->
+        <joint name="${name}_2_joint" type="continuous">
+            <parent link="${name}_1_link"/>
+            <child link="${name}_2_link"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <axis xyz="0 -1 0"/>
+        </joint>
+
+        <!-- Link 2 -->
+        <link name="${name}_2_link">
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link2.stl" />
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link2.stl" />
+                </geometry>
+                <material name="orange"/>
+            </visual>
+
+            <xacro:default_inertial/>
+        </link>
+
+        <!-- Joint 3 -->
+        <joint name="${name}_3_joint" type="continuous">
+            <parent link="${name}_2_link"/>
+            <child link="${name}_3_link"/>
+            <origin xyz="0 0 0.350" rpy="0 0 0"/>
+            <axis xyz="0 1 0"/>
+        </joint>
+
+        <!-- Link 3 -->
+        <link name="${name}_3_link">
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link3.stl" />
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link3.stl" />
+                </geometry>
+                <material name="orange"/>
+            </visual>
+
+            <xacro:default_inertial/>
+        </link>
+
+        <!-- Joint 4 -->
+        <joint name="${name}_4_joint" type="continuous">
+            <parent link="${name}_3_link"/>
+            <child link="${name}_4_link"/>
+            <origin xyz="0 0 0.0" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+        </joint>
+
+        <!-- Link 4 -->
+        <link name="${name}_4_link">
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link4.stl" />
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link4.stl" />
+                </geometry>
+                <material name="orange"/>
+            </visual>
+
+            <xacro:default_inertial/>
+        </link>
+
+        <!-- Joint 5 -->
+        <joint name="${name}_5_joint" type="continuous">
+            <parent link="${name}_4_link"/>
+            <child link="${name}_5_link"/>
+            <origin xyz="0 0 0.305" rpy="0 0 0"/>
+            <axis xyz="0 1 0"/>
+        </joint>
+
+        <!-- Link 5 -->
+        <link name="${name}_5_link">
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link5.stl" />
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link5.stl" />
+                </geometry>
+                <material name="orange"/>
+            </visual>
+
+            <xacro:default_inertial/>
+        </link>
+
+        <!-- Joint 6 -->
+        <joint name="${name}_6_joint" type="continuous">
+            <parent link="${name}_5_link"/>
+            <child link="${name}_6_link"/>
+            <origin xyz="0 0 0.07475" rpy="0 3.1416 0"/>
+            <axis xyz="0 0 -1"/>
+        </joint>
+
+        <!-- Link 6 -->
+        <link name="${name}_6_link">
+            <collision>
+                <origin xyz="0 0 0.0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link6.stl" />
+                </geometry>
+            </collision>
+
+            <visual>
+                <origin xyz="0 0 0.0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://lwa4p_description/meshes/lwa4p_link6.stl" />
+                </geometry>
+                <material name="orange"/>
+            </visual>
+
+            <xacro:default_inertial/>
+        </link>
+
+
+        <!-- extensions -->
+        <xacro:schunk_lwa4p_gazebo name="${name}" />
+        <xacro:schunk_lwa4p_transmission name="${name}" />
+
+        <!-- ros_control plugin -->
+        <gazebo>
+        <plugin name="ros_control" filename="libhwi_switch_gazebo_ros_control.so">
+            <robotNamespace>${name}</robotNamespace>
+            <filterJointsParam>joint_names</filterJointsParam>
+        </plugin>
+        </gazebo>
+
+    </xacro:macro>
+
+</robot>

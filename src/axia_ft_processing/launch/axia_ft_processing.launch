@@ -1,0 +1,8 @@
+<launch>
+    
+    <include file="$(find netft_rdt_driver)/launch/ft_sensor.launch" />
+
+    <node pkg="axia_ft_processing" name="axia_ft_processing" type="axia_ft_processing_node" />
+
+</launch>
+

@@ -1,0 +1,5 @@
+Wired connection 
+IPv4 (Manual) set Address to 192.168.1.100 
+set Netmask to 255.255.255.0 
+
+Ati config: Browser url: 192.168.1.2

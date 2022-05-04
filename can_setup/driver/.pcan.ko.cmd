@@ -1,0 +1,1 @@
+cmd_/home/student/catkin_ws_control/can_setup/driver/pcan.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/student/catkin_ws_control/can_setup/driver/pcan.ko /home/student/catkin_ws_control/can_setup/driver/pcan.o /home/student/catkin_ws_control/can_setup/driver/pcan.mod.o;  true

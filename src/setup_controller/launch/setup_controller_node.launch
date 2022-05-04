@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="setup_controller" name="setup_controller" type="setup_controller_node"/>
+</launch>

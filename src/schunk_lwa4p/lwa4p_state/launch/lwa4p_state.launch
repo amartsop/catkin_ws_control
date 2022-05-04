@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="lwa4p_state" name="lwa4p_state" type="lwa4p_state_node" />
+</launch>

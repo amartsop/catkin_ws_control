@@ -1,0 +1,22 @@
+<launch>
+    
+    <!-- Launch camera1 -->
+    <include file="$(find camera_control)/launch/camera_control.launch">
+        <arg name="node_name" value="camera1_control"/>
+        <arg name="topic_name" value="compressed_camera1_images"/>
+        <arg name="desired_fps" value="100"/>
+        <arg name="usb_port" value="1"/>
+    </include>
+
+    <!-- Launch camera2 -->
+    <include file="$(find camera_control)/launch/camera_control.launch">
+        <arg name="node_name" value="camera2_control"/>
+        <arg name="topic_name" value="compressed_camera2_images"/>
+        <arg name="desired_fps" value="100"/>
+        <arg name="usb_port" value="2"/>
+    </include>
+
+    <!-- Launch image processing -->
+    <!-- <node pkg="image_processing" type="image_processing.py" name="image_processing" output="screen" /> -->
+
+</launch>

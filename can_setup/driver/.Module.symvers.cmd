@@ -1,0 +1,1 @@
+cmd_/home/student/catkin_ws_control/can_setup/driver/Module.symvers := sed 's/\.ko$$/\.o/' /home/student/catkin_ws_control/can_setup/driver/modules.order | scripts/mod/modpost -m -a  -o /home/student/catkin_ws_control/can_setup/driver/Module.symvers -e -i Module.symvers   -T -

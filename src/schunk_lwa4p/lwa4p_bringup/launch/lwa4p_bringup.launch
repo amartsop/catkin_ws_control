@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- send urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find lwa4p_description)/urdf/lwa4p_robot.urdf.xacro'" />
+
+  <!-- robot state publisher -->
+  <node ns="lwa4p_arm" pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" type="string" value="" />
+  </node>
+
+  <node ns="lwa4p_arm" name="driver" pkg="canopen_motor_node" type="canopen_motor_node" output="screen" clear_params="true" launch-prefix="">
+     <rosparam command="load" file="$(find lwa4p_bringup)/config/can0.yaml" />
+     <rosparam command="load" file="$(find lwa4p_bringup)/config/arm_driver.yaml" />
+  </node>
+
+  <!-- controllers -->
+  <rosparam ns="lwa4p_arm" command="load" file="$(find lwa4p_bringup)/config/arm_controller.yaml" />
+  <!-- rosparam ns="arm" command="load" file="$(find schunk_lwa4p)/config/joint_limits.yaml"/ -->
+
+  <!-- start_controllers -->
+  <node ns="lwa4p_arm" name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/>
+
+</launch>

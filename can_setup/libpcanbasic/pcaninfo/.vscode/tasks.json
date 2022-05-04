@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build (debug) pcaninfo",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": ["EXTRA_CFLAGS=\"-g -D_DEBUG\""],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Clean pcaninfo",
+            "group": "build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Rebuild pcaninfo",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "type": "shell",
+            "command": "make",
+            "args": ["clean", "all"],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

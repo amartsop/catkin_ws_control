@@ -1,0 +1,24 @@
+<launch>
+
+    <!-- joy node -->
+    <node pkg="joy" type="joy_node" name="joy_node">
+        <param name="dev" type="string" value="/dev/input/js0" />
+        <!-- <param name="deadzone" value="0.12" /> -->
+    </node>
+
+    <include file="$(find lwa4p_bringup)/launch/lwa4p_bringup.launch" />
+
+    <node pkg="rosservice" type="rosservice" name="global_loc" args="call /lwa4p_arm/driver/init" />
+
+    <include file="$(find lwa4p_moveit_config)/launch/lwa4p_moveit_planning_execution.launch" />
+
+    <include file="$(find lwa4p_robot_controller)/launch/lwa4p_robot_controller.launch" />
+
+    <include file="$(find lwa4p_state)/launch/lwa4p_state.launch" />
+    
+    <include file="$(find axia_ft_processing)/launch/axia_ft_processing.launch" />
+    
+    <!-- <node pkg="daheng_cameras" type="camera_control_main.py" name="camera_control_main" /> -->
+
+</launch>
+

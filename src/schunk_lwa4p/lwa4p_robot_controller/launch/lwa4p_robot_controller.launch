@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="lwa4p_robot_controller" name="lwa4p_robot_controller" type="lwa4p_robot_controller_node" />
+</launch>

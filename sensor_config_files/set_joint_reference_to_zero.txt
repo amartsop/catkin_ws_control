@@ -1,0 +1,7 @@
+1. Move joint of interest to true zero.
+2. Turn off the robot and wait for 1 min.
+3. Restart the robot.
+4. Run source can_connect.sh
+5. Run roslaunch experimental_setup experimental_launch.launch 
+6. Run rostopic echo /arm/arm_controller/state.
+7. Verify that the joint of interest is at 0. 

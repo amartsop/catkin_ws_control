@@ -1,0 +1,1 @@
+cmd_/home/student/catkin_ws_control/can_setup/driver/modules.order := {   echo /home/student/catkin_ws_control/can_setup/driver/pcan.ko; :; } | awk '!x[$$0]++' - > /home/student/catkin_ws_control/can_setup/driver/modules.order

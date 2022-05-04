@@ -1,0 +1,4 @@
+std_msgs/Header header
+
+sensor_msgs/CompressedImage camera1
+sensor_msgs/CompressedImage camera2

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/student/catkin_ws_control/src/cameras/gxipy/build/devel/setup.sh

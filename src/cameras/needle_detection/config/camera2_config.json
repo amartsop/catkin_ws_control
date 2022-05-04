@@ -1,0 +1,15 @@
+{
+  "camera_position(m)": { "x": 0.286432, "y": 0.292462, "z": 1.02 },
+  "camera_orientation": {
+      "r11": 1.0, "r12": 0.0, "r13": 0.0,
+      "r21": 0.0, "r22": -1.0, "r23": 0.0,
+      "r31": 0.0, "r32": 0.0, "r33": -1.0
+    },
+  "focal_length_bar_x(px)": 1.21065625e+03,
+  "focal_length_bar_y(px)": 1.21235942e+03,
+  "central_point_x(px)": 7.45339520e+02,
+  "central_point_y(px)": 5.57434704e+02
+}
+
+
+

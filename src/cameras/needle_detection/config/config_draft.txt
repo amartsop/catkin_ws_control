@@ -1,0 +1,26 @@
+Camera1
+{
+  "camera_position(m)": { "x": 0.3, "y": 1.0, "z": 0.3 },
+  "camera_orientation": {
+      "r11": -1.0, "r12": 0.0, "r13": 0.0,
+      "r21": 0.0, "r22": 0.0, "r23": -1.0,
+      "r31": 0.0, "r32": -1.0, "r33": 0.0
+    },
+  "focal_length_bar_x(px)": 1.20993895e+03,
+  "focal_length_bar_y(px)": 1.20399450e+03,
+  "central_point_x(px)": 7.40845621e+02,
+  "central_point_y(px)": 5.27713772e+02
+}
+  
+{
+  "camera_position(m)": { "x": 0.3, "y": 0.3, "z": 1.0 },
+  "camera_orientation": {
+      "r11": 1.0, "r12": 0.0, "r13": 0.0,
+      "r21": 0.0, "r22": -1.0, "r23": 0.0,
+      "r31": 0.0, "r32": 0.0, "r33": -1.0
+    },
+  "focal_length_bar_x(px)": 1.20695005e+03,
+  "focal_length_bar_y(px)": 1.20020629e+03,
+  "central_point_x(px)": 7.37935074e+02,
+  "central_point_y(px)": 5.42476013e+02
+}

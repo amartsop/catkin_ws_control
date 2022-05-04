@@ -1,0 +1,7 @@
+set(gxipy_SETUP_PY_SETUP_MODULE "distutils.core")
+set(gxipy_SETUP_PY_VERSION "0.0.0")
+set(gxipy_SETUP_PY_SCRIPTS "")
+set(gxipy_SETUP_PY_PACKAGES "gxipy")
+set(gxipy_SETUP_PY_PACKAGE_DIRS "src/gxipy")
+set(gxipy_SETUP_PY_MODULES "")
+set(gxipy_SETUP_PY_MODULE_DIRS "")

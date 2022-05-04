@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="automatic_control" name="automatic_control" type="automatic_control_node" />
+</launch>

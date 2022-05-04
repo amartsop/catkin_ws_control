@@ -1,0 +1,8 @@
+prefix=/home/student/catkin_ws_control/src/cameras/gxipy/build/devel
+
+Name: gxipy
+Description: Description of gxipy
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
